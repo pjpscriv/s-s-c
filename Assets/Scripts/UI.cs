@@ -14,15 +14,6 @@ public class UI : MonoBehaviour {
     public GameObject plantGUI;
     public GameObject portalGUI;
 
-    // Images to Link
-    public Image coreImg;
-    public Image tempImg;
-    public Image aiImg;
-    public Image elecImg;
-    public Image shieldImg;
-    public Image plantImg;
-    public Image portalImg;
-
     // Blocked Station GUIs
     private static List<int> blocked = new List<int>();
     private List<int> free = new List<int>();
