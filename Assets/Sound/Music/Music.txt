@@ -1,0 +1,11 @@
+Start all tracks at start simultaniously with 2 & 3 muted at game start
+
+As game intensifies fade in 2.mp3
+
+As game gets overwelming fade in 3.mp3
+
+when you are about to die fade out 1 & 2
+
+fade out 3.mp3 at game end
+
+
