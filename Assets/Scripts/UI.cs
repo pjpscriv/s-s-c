@@ -32,6 +32,6 @@ public class UI : MonoBehaviour {
         plantImg.fillAmount   = core.Plants / 100.0f;
         portalImg.fillAmount  = core.Portals / 100.0f;
 
-        Debug.Log("UI values updated. :)");
+        // Debug.Log("UI values updated. :)");
     }
 }
