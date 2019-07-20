@@ -34,7 +34,7 @@ public class AIController : MonoBehaviour
 
     }
 
-    void getSanity() {
+    float getSanity() {
         Core core = GameObject.FindGameObjectWithTag("GameController").GetComponent<Core>();
         return core.AI;
     }
