@@ -1,22 +1,11 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 7d85527806746824990dfad7adbc46b0
+guid: 5b1d0f969ee17d948be287c69057777c
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable:
   - first:
       74: 1989289236423521904
     second: Default Take
-=======
-<<<<<<< Updated upstream
-guid: 4f487d09bd918e74fbd6b44795cdd7d1
-=======
-guid: 79e9de88976e2974ab5cd89072c41260
->>>>>>> Stashed changes
-ModelImporter:
-  serializedVersion: 25
-  internalIDToNameTable: []
->>>>>>> master
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -44,14 +33,13 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-<<<<<<< HEAD
     clipAnimations:
     - serializedVersion: 16
       name: Default Take
       takeName: Default Take
       internalID: 1989289236423521904
       firstFrame: 0
-      lastFrame: 119
+      lastFrame: 249
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -75,9 +63,6 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
-=======
-    clipAnimations: []
->>>>>>> master
     isReadable: 0
   meshes:
     lODScreenPercentages: []
