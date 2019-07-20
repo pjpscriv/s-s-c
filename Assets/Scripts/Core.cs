@@ -9,7 +9,7 @@ public class Core : MonoBehaviour
     public float CoreHP = 100.0f; //overall core health 
     public float Temperature = 24.0f; //temp, in deg C
     public float AI = 90.0f;
-    public float Electrical = 50.0f;
+    public float Electrical = 95.0f;
     public float Shields = 50.0f;
     public float Plants = 100.0f;
     public float Portals = 100.0f;
@@ -23,6 +23,23 @@ public class Core : MonoBehaviour
     void Update()
     {
         debugchangeval();
+
+        CoreHP = boundvalues(CoreHP, 0.0f, 100.0f);
+        Temperature = boundvalues(Temperature, -10.0f, 50.0f);
+        AI = boundvalues(AI, 0.0f, 100.0f);
+        Electrical = boundvalues(Electrical, 0.0f, 100.0f);
+        Shields = boundvalues(Shields, 0.0f, 100.0f);
+        Plants = boundvalues(Plants, 0.0f, 100.0f);
+        Portals = boundvalues(Portals, 0.0f, 100.0f);
+    }
+
+    float boundvalues(float val,float min,float max) {
+        if(val < min){
+            val = min;
+        }else if (val > max){
+            val = max;
+        }
+        return val;
     }
 
     void debugchangeval(){
@@ -40,15 +57,15 @@ public class Core : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha6)){ CurrentChange = 6; }
 
-        if ((Input.GetKeyDown(KeyCode.Equals)) || (Input.GetKeyDown(KeyCode.Minus))){
+        if ((Input.GetKey(KeyCode.Equals)) || (Input.GetKey(KeyCode.Minus)) || Input.GetKey(KeyCode.Plus) || Input.GetKey(KeyCode.Underscore))
+        {
             float mod = 0.0f;
-            if (Input.GetKeyDown(KeyCode.Equals)) {
-                print("Plus");
-                mod = 2.5f;
+            if (Input.GetKey(KeyCode.Equals) || Input.GetKey(KeyCode.Plus)) {
+                mod = 1f;
             }
-            if (Input.GetKeyDown(KeyCode.Minus)){
-                print("Minus");
-                mod = -5f;
+            if (Input.GetKey(KeyCode.Minus) || Input.GetKey(KeyCode.Underscore))
+            {
+                mod = -1f;
             }
 
             if(CurrentChange == 0){CoreHP += mod;}
