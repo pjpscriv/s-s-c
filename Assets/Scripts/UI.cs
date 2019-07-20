@@ -5,16 +5,21 @@ using UnityEngine.UI;
 
 public class UI : MonoBehaviour {
 
-    // Core
-    // publice Image coreImg;
+    // Maybe link by Parent GameObjects
+    public GameObject CoreStat;
 
-    // Module Bars
+    // Images to Link
+    public Image coreImg;
     public Image tempImg;
     public Image aiImg;
-    public Image elecImge;
+    public Image elecImg;
     public Image shieldImg;
     public Image plantImg;
     public Image portalImg;
+
+    void Start() {
+
+    }
 
     void Update()
     {
@@ -22,16 +27,34 @@ public class UI : MonoBehaviour {
     }
 
     void updateValues() {
+        
         Core core = GameObject.FindGameObjectWithTag("GameController").GetComponent<Core>();
 
-        // coreHealth = core.CoreHP / 100.0;
+        // CoreStat.core-in
+        coreImg.fillAmount    = core.CoreHP      / 100.0f;
+
+        // Module Bars
+
         tempImg.fillAmount    = core.Temperature / 100.0f;
-        aiImg.fillAmount      = core.AI / 100.0f;
-        elecImge.fillAmount   = core.Electrical / 100.0f;
-        shieldImg.fillAmount  = core.Shields / 100.0f;
-        plantImg.fillAmount   = core.Plants / 100.0f;
-        portalImg.fillAmount  = core.Portals / 100.0f;
+        aiImg.fillAmount      = core.AI          / 100.0f;
+        elecImg.fillAmount    = core.Electrical  / 100.0f;
+        shieldImg.fillAmount  = core.Shields     / 100.0f;
+        plantImg.fillAmount   = core.Plants      / 100.0f;
+        portalImg.fillAmount  = core.Portals     / 100.0f;
 
         // Debug.Log("UI values updated. :)");
     }
+
+    // Interesting get child action for code simplification
+    /** 
+    void getChild(string name) {
+    foreach (Transform child in transform)
+         {
+             if (child.tag == "Tag")
+             {
+                 Children.Add(child.gameObject);
+             }
+         }
+    }
+    */
 }
