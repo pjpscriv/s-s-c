@@ -2,29 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ToolPickUp : MonoBehaviour
+public class Module : MonoBehaviour
 {
 
-    public GameObject currentTool;
-    public GameObject closestTool;
-    public float reach;
-    public GameObject hands;
-    public GameObject player;
-    public float distanceHere;
-    private ToolID currentToolID;
+    public GameObject closestModule;
+    private ModuleCode currentModuleCode;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentTool = null;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Find closest Tool (if there is one)
-        closestTool = FindClosestTool();
-        //If closest Tool is within pickup distance, display button over object
+        //Find closest Module (if there is one)
+        closestModule = FindClosestModule();
+
+        //If closest Module is within interaction distance, display interaction button
+
+        currentModuleCode = closestModule.GetComponent<ModuleCode>();
 
         //Else, if player has a tool and pushed the pickup/drop button, drop tool at feet
         if (Input.GetButtonDown("PickUp") && currentTool != null) {
@@ -35,7 +33,7 @@ public class ToolPickUp : MonoBehaviour
             distanceHere = distance.magnitude;
             if (distance.magnitude < reach) {
                 //If closest Tool is within pickup distance and button is pushed, attach tool to player, and say player now has that tool (also display on UI)
-                if (Input.GetButtonDown("PickUp") && currentTool == null){
+                if (Input.GetButtonDown("PickUp") && currentTool == null) {
                     currentTool = closestTool;
                     currentTool.transform.position = hands.transform.position;
                     currentTool.transform.rotation = Quaternion.LookRotation(this.transform.forward, transform.up);
@@ -43,7 +41,7 @@ public class ToolPickUp : MonoBehaviour
                 }
             }
         }
-        
+
         //Use Tool Segment:
         if (Input.GetButtonDown("Use") && currentTool != null) {
 
@@ -57,7 +55,7 @@ public class ToolPickUp : MonoBehaviour
                 } else {
                     //Click sound effect
                 }
-            //If tool is spray
+                //If tool is spray
             } else if (currentToolID.toolID.Equals(1)) {
                 if (currentToolID.liquidLevel > 1) {
                     currentToolID.liquidLevel = -1;
@@ -68,13 +66,11 @@ public class ToolPickUp : MonoBehaviour
             }
 
         }
-        
     }
-
-    public GameObject FindClosestTool()
+    public GameObject FindClosestModule()
     {
         GameObject[] gos;
-        gos = GameObject.FindGameObjectsWithTag("Tool");
+        gos = GameObject.FindGameObjectsWithTag("Module");
         GameObject closest = null;
         float distance = Mathf.Infinity;
         Vector3 position = transform.position;
