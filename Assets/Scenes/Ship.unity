@@ -199,9 +199,10 @@ GameObject:
   - component: {fileID: 141971003}
   - component: {fileID: 141971002}
   - component: {fileID: 141971006}
+  - component: {fileID: 141971007}
   m_Layer: 5
   m_Name: HUD
-  m_TagString: Untagged
+  m_TagString: HUD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -301,12 +302,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7287f9b02d6498d418cccdff3fb94511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CoreStat: {fileID: 1369168423}
+  tempGUI: {fileID: 1636964636}
+  aiGUI: {fileID: 916292355}
+  elecGUI: {fileID: 389534768}
+  shieldGUI: {fileID: 1922876010}
+  plantGUI: {fileID: 1739480729}
+  portalGUI: {fileID: 1720944343}
+  coreImg: {fileID: 914910489}
   tempImg: {fileID: 1335912468}
   aiImg: {fileID: 1543252991}
-  elecImge: {fileID: 1860691947}
+  elecImg: {fileID: 1860691947}
   shieldImg: {fileID: 2033512445}
   plantImg: {fileID: 1213857464}
   portalImg: {fileID: 2012818162}
+--- !u!114 &141971007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141971001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a6c205744ce6c41b3e538fde608804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &282536137
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,7 +1314,7 @@ GameObject:
   - component: {fileID: 914910489}
   m_Layer: 5
   m_Name: core-in
-  m_TagString: Untagged
+  m_TagString: GUI-Bar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1940,7 +1961,7 @@ GameObject:
   - component: {fileID: 1213857464}
   m_Layer: 5
   m_Name: plant-in
-  m_TagString: Untagged
+  m_TagString: GUI-Bar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2166,7 +2187,7 @@ GameObject:
   - component: {fileID: 1335912468}
   m_Layer: 5
   m_Name: temp-in
-  m_TagString: Untagged
+  m_TagString: GUI-Bar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2540,7 +2561,7 @@ GameObject:
   - component: {fileID: 1543252991}
   m_Layer: 5
   m_Name: ai-in
-  m_TagString: Untagged
+  m_TagString: GUI-Bar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3153,7 +3174,7 @@ GameObject:
   - component: {fileID: 1860691947}
   m_Layer: 5
   m_Name: elec-in
-  m_TagString: Untagged
+  m_TagString: GUI-Bar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3421,7 +3442,7 @@ GameObject:
   - component: {fileID: 2012818162}
   m_Layer: 5
   m_Name: portal-in
-  m_TagString: Untagged
+  m_TagString: GUI-Bar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3495,7 +3516,7 @@ GameObject:
   - component: {fileID: 2033512445}
   m_Layer: 5
   m_Name: shield-in
-  m_TagString: Untagged
+  m_TagString: GUI-Bar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
