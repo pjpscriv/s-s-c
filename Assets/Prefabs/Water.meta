@@ -1,12 +1,16 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
-guid: 6cde0fd2e273d0f4ca9094be1edb4391
-=======
 <<<<<<< Updated upstream
-guid: 2d20a48479873964eba035e5703fc6fa
+guid: 28d3c88cabeca2d4483b25330077af2c
 =======
-guid: 7a9aef05917b9fb46b40f11dca0b4005
+guid: a0b936fb47f58a14ab1adefdf9a77bbe
 >>>>>>> Stashed changes
+=======
+<<<<<<< HEAD
+guid: 1d9092996c7a3494b99167b4c4497ab2
+=======
+guid: 28d3c88cabeca2d4483b25330077af2c
+>>>>>>> master
 >>>>>>> master
 folderAsset: yes
 DefaultImporter:
