@@ -13,7 +13,7 @@ public class PlayerController2 : MonoBehaviour
 
     public float sensitivity = 5f;
 
-    string pValue = "P1";
+    public string pValue = "P1";
 
     public Rigidbody _body;
     private Vector3 _inputs = Vector3.zero;
