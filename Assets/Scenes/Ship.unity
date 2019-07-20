@@ -273,6 +273,7 @@ GameObject:
   - component: {fileID: 141971004}
   - component: {fileID: 141971003}
   - component: {fileID: 141971002}
+  - component: {fileID: 141971006}
   m_Layer: 5
   m_Name: HUD
   m_TagString: Untagged
@@ -360,6 +361,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &141971006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141971001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7287f9b02d6498d418cccdff3fb94511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempImg: {fileID: 1335912468}
+  aiImg: {fileID: 1543252991}
+  elecImge: {fileID: 1860691947}
+  shieldImg: {fileID: 2033512445}
+  plantImg: {fileID: 1213857464}
+  portalImg: {fileID: 2012818162}
 --- !u!1 &361682967
 GameObject:
   m_ObjectHideFlags: 0
