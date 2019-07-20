@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Tool
+  - HUD
+  - GUI-Bar
   layers:
   - Default
   - TransparentFX
@@ -27,7 +29,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Bars
   - 
   - 
   - 

@@ -5,33 +5,41 @@ using UnityEngine;
 public class AIController : MonoBehaviour
 {
 
+    private int brokenBars;
+
     //
+    void Start() {
+        brokenBars = 0;
+    }
 
     // Update is called once per frame
     void Update() {
 
         float sanity = getSanity();
-        int brokenBars = 0;
+        int shouldBeBroken;
 
         if (sanity < 10) {
-            brokenBars = 6;
-        }
-        else if (sanity < 25) {
-            brokenBars = 5;
-        }
-        else if (sanity < 40) {
-            brokenBars = 4;
-        }
-        else if (sanity < 55) {
-            brokenBars = 3;
-        }
-        else if (sanity < 70) {
-            brokenBars = 2;
-        }
-        else if (sanity < 90) {
-            brokenBars = 1;
+            shouldBeBroken = 6;
+        } else if (sanity < 25) {
+            shouldBeBroken = 5;
+        } else if (sanity < 40) {
+            shouldBeBroken = 4;
+        } else if (sanity < 55) {
+            shouldBeBroken = 3;
+        } else if (sanity < 70) {
+            shouldBeBroken = 2;
+        } else if (sanity < 90) {
+            shouldBeBroken = 1;
+        } else {
+            shouldBeBroken = 0;
         }
 
+        if (brokenBars != shouldBeBroken) {
+            // Debug.Log("CHANGE # BROKEN!");
+            brokenBars = shouldBeBroken;
+            UI ui = GameObject.FindGameObjectWithTag("HUD").GetComponent<UI>();
+            ui.set_blocked(brokenBars);
+        }
     }
 
     float getSanity() {
