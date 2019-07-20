@@ -1,13 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-<<<<<<< Updated upstream
 guid: 8f066aeb43f29a94aa4d6c76affefa9b
-=======
-guid: f0673267d985c4c46a3e440d36d2a79f
->>>>>>> Stashed changes
-=======
-guid: fe368983b22fd494a804d87f288b0c79
->>>>>>> master
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
@@ -94,7 +86,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

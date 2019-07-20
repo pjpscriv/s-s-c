@@ -10,6 +10,9 @@ public class iModule : MonoBehaviour
     float degradeChance = 0.1f;
     float procChance = 0.01f;
 
+    float procDefinite = 30f;
+    float lastProc = 0f;
+
     // Update is called once per frame
     void Update()
     {
@@ -26,7 +29,12 @@ public class iModule : MonoBehaviour
         }
     }
 
-    
+    void UpdateProc()
+    {
+        float timeSinceLast = Time.time - lastProc;
+        float linearScale = (1f - ((procDefinite - timeSinceLast) / procDefinite));
+        procChance = (procChance + linearScale);
+    }
 
     //rolls a random chance to 
     public bool RandProc()

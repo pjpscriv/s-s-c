@@ -4,23 +4,29 @@ ModelImporter:
   serializedVersion: 25
   internalIDToNameTable:
   - first:
-      74: 90641405182728894
-    second: Cylinder.001|CoreCentreAction
+      74: 2692129555370801864
+    second: Roof|CoreCentreAction
   - first:
-      74: 3936550650637524798
-    second: Cylinder.001|Cylinder.001Action
+      74: -8760179043807172756
+    second: Roof|Cylinder.001Action
   - first:
-      74: -5525172884732378176
-    second: Cylinder.001|Cylinder.002Action
+      74: 6641040761560443013
+    second: Roof|Cylinder.002Action
   - first:
-      74: 3602085371921796995
-    second: Cylinder.001|CylinderAction
+      74: 2043604176962817432
+    second: Roof|CylinderAction
   - first:
-      74: 4639736067092989289
-    second: Cylinder.001|CylinderAction.001
+      74: -740617749030273531
+    second: Roof|CylinderAction.001
   - first:
-      74: 7195287408783472036
-    second: Cylinder.001|InnerRingAction
+      74: -7621421172108374854
+    second: Roof|InnerRingAction
+  - first:
+      74: -5624661326692720829
+    second: Roof|InnerRingAction.001
+  - first:
+      74: -8229216934828301960
+    second: Roof|OuterRingAction
   - first:
       74: 8719443146483050985
     second: GlassEnclosure|CoreCentreAction
@@ -40,23 +46,35 @@ ModelImporter:
       74: 7281850769010419790
     second: GlassEnclosure|InnerRingAction
   - first:
-      74: -7961799636064394582
-    second: Cylinder|CoreCentreAction
+      74: 7022730214567543661
+    second: GlassEnclosure|InnerRingAction.001
   - first:
-      74: -1565937593473639013
-    second: Cylinder|Cylinder.001Action
+      74: -2504361838544454181
+    second: GlassEnclosure|OuterRingAction
   - first:
-      74: 5100070300365281523
-    second: Cylinder|Cylinder.002Action
+      74: 7707591083224680413
+    second: FloorDetail|CoreCentreAction
   - first:
-      74: -88723805440604879
-    second: Cylinder|CylinderAction
+      74: -8379779782379922140
+    second: FloorDetail|Cylinder.001Action
   - first:
-      74: -6242241587816052237
-    second: Cylinder|CylinderAction.001
+      74: -8726711446656463048
+    second: FloorDetail|Cylinder.002Action
   - first:
-      74: -4799235066998764214
-    second: Cylinder|InnerRingAction
+      74: -9138912914015345593
+    second: FloorDetail|CylinderAction
+  - first:
+      74: 6274163675112891228
+    second: FloorDetail|CylinderAction.001
+  - first:
+      74: -8703506333747582464
+    second: FloorDetail|InnerRingAction
+  - first:
+      74: 6252556954570022709
+    second: FloorDetail|InnerRingAction.001
+  - first:
+      74: -2459228125845545174
+    second: FloorDetail|OuterRingAction
   - first:
       74: -3578131301065627160
     second: OuterRing|CoreCentreAction
@@ -76,6 +94,12 @@ ModelImporter:
       74: -1057006545161151938
     second: OuterRing|InnerRingAction
   - first:
+      74: 5139769950407529492
+    second: OuterRing|InnerRingAction.001
+  - first:
+      74: 3187872282155410506
+    second: OuterRing|OuterRingAction
+  - first:
       74: 2359272781956843973
     second: InnerRing|CoreCentreAction
   - first:
@@ -94,6 +118,12 @@ ModelImporter:
       74: -660088207660374760
     second: InnerRing|InnerRingAction
   - first:
+      74: 5409822561409564272
+    second: InnerRing|InnerRingAction.001
+  - first:
+      74: 409615570293095465
+    second: InnerRing|OuterRingAction
+  - first:
       74: -2922323351013204651
     second: CoreCentre|CoreCentreAction
   - first:
@@ -111,6 +141,12 @@ ModelImporter:
   - first:
       74: -2019480960796819575
     second: CoreCentre|InnerRingAction
+  - first:
+      74: 2920408201858602021
+    second: CoreCentre|InnerRingAction.001
+  - first:
+      74: -737538283362062538
+    second: CoreCentre|OuterRingAction
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -140,38 +176,9 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Cylinder.001|CoreCentreAction
-      takeName: Cylinder.001|CoreCentreAction
-      internalID: 90641405182728894
-      firstFrame: 0
-      lastFrame: 119
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Cylinder.001|Cylinder.001Action
-      takeName: Cylinder.001|Cylinder.001Action
-      internalID: 3936550650637524798
+      name: Roof|CoreCentreAction
+      takeName: Roof|CoreCentreAction
+      internalID: 2692129555370801864
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -198,38 +205,9 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Cylinder.001|Cylinder.002Action
-      takeName: Cylinder.001|Cylinder.002Action
-      internalID: -5525172884732378176
-      firstFrame: 0
-      lastFrame: 119
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Cylinder.001|CylinderAction
-      takeName: Cylinder.001|CylinderAction
-      internalID: 3602085371921796995
+      name: Roof|Cylinder.001Action
+      takeName: Roof|Cylinder.001Action
+      internalID: -8760179043807172756
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -256,9 +234,9 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Cylinder.001|CylinderAction.001
-      takeName: Cylinder.001|CylinderAction.001
-      internalID: 4639736067092989289
+      name: Roof|Cylinder.002Action
+      takeName: Roof|Cylinder.002Action
+      internalID: 6641040761560443013
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -285,11 +263,127 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Cylinder.001|InnerRingAction
-      takeName: Cylinder.001|InnerRingAction
-      internalID: 7195287408783472036
+      name: Roof|CylinderAction
+      takeName: Roof|CylinderAction
+      internalID: 2043604176962817432
       firstFrame: 0
-      lastFrame: 119
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Roof|CylinderAction.001
+      takeName: Roof|CylinderAction.001
+      internalID: -740617749030273531
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Roof|InnerRingAction
+      takeName: Roof|InnerRingAction
+      internalID: -7621421172108374854
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Roof|InnerRingAction.001
+      takeName: Roof|InnerRingAction.001
+      internalID: -5624661326692720829
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Roof|OuterRingAction
+      takeName: Roof|OuterRingAction
+      internalID: -8229216934828301960
+      firstFrame: 0
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -318,7 +412,7 @@ ModelImporter:
       takeName: GlassEnclosure|CoreCentreAction
       internalID: 8719443146483050985
       firstFrame: 0
-      lastFrame: 119
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -376,7 +470,7 @@ ModelImporter:
       takeName: GlassEnclosure|Cylinder.002Action
       internalID: 2905546936526854884
       firstFrame: 0
-      lastFrame: 119
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -463,7 +557,7 @@ ModelImporter:
       takeName: GlassEnclosure|InnerRingAction
       internalID: 7281850769010419790
       firstFrame: 0
-      lastFrame: 119
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -488,38 +582,9 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Cylinder|CoreCentreAction
-      takeName: Cylinder|CoreCentreAction
-      internalID: -7961799636064394582
-      firstFrame: 0
-      lastFrame: 119
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Cylinder|Cylinder.001Action
-      takeName: Cylinder|Cylinder.001Action
-      internalID: -1565937593473639013
+      name: GlassEnclosure|InnerRingAction.001
+      takeName: GlassEnclosure|InnerRingAction.001
+      internalID: 7022730214567543661
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -546,38 +611,9 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Cylinder|Cylinder.002Action
-      takeName: Cylinder|Cylinder.002Action
-      internalID: 5100070300365281523
-      firstFrame: 0
-      lastFrame: 119
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Cylinder|CylinderAction
-      takeName: Cylinder|CylinderAction
-      internalID: -88723805440604879
+      name: GlassEnclosure|OuterRingAction
+      takeName: GlassEnclosure|OuterRingAction
+      internalID: -2504361838544454181
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -604,9 +640,9 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Cylinder|CylinderAction.001
-      takeName: Cylinder|CylinderAction.001
-      internalID: -6242241587816052237
+      name: FloorDetail|CoreCentreAction
+      takeName: FloorDetail|CoreCentreAction
+      internalID: 7707591083224680413
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -633,11 +669,185 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Cylinder|InnerRingAction
-      takeName: Cylinder|InnerRingAction
-      internalID: -4799235066998764214
+      name: FloorDetail|Cylinder.001Action
+      takeName: FloorDetail|Cylinder.001Action
+      internalID: -8379779782379922140
       firstFrame: 0
-      lastFrame: 119
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FloorDetail|Cylinder.002Action
+      takeName: FloorDetail|Cylinder.002Action
+      internalID: -8726711446656463048
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FloorDetail|CylinderAction
+      takeName: FloorDetail|CylinderAction
+      internalID: -9138912914015345593
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FloorDetail|CylinderAction.001
+      takeName: FloorDetail|CylinderAction.001
+      internalID: 6274163675112891228
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FloorDetail|InnerRingAction
+      takeName: FloorDetail|InnerRingAction
+      internalID: -8703506333747582464
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FloorDetail|InnerRingAction.001
+      takeName: FloorDetail|InnerRingAction.001
+      internalID: 6252556954570022709
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FloorDetail|OuterRingAction
+      takeName: FloorDetail|OuterRingAction
+      internalID: -2459228125845545174
+      firstFrame: 0
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -666,7 +876,7 @@ ModelImporter:
       takeName: OuterRing|CoreCentreAction
       internalID: -3578131301065627160
       firstFrame: 0
-      lastFrame: 119
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -724,7 +934,7 @@ ModelImporter:
       takeName: OuterRing|Cylinder.002Action
       internalID: -1891251864378802374
       firstFrame: 0
-      lastFrame: 119
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -811,7 +1021,65 @@ ModelImporter:
       takeName: OuterRing|InnerRingAction
       internalID: -1057006545161151938
       firstFrame: 0
-      lastFrame: 119
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: OuterRing|InnerRingAction.001
+      takeName: OuterRing|InnerRingAction.001
+      internalID: 5139769950407529492
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: OuterRing|OuterRingAction
+      takeName: OuterRing|OuterRingAction
+      internalID: 3187872282155410506
+      firstFrame: 0
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -840,7 +1108,7 @@ ModelImporter:
       takeName: InnerRing|CoreCentreAction
       internalID: 2359272781956843973
       firstFrame: 0
-      lastFrame: 119
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -898,7 +1166,7 @@ ModelImporter:
       takeName: InnerRing|Cylinder.002Action
       internalID: -7341135895084938848
       firstFrame: 0
-      lastFrame: 119
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -985,7 +1253,65 @@ ModelImporter:
       takeName: InnerRing|InnerRingAction
       internalID: -660088207660374760
       firstFrame: 0
-      lastFrame: 119
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: InnerRing|InnerRingAction.001
+      takeName: InnerRing|InnerRingAction.001
+      internalID: 5409822561409564272
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: InnerRing|OuterRingAction
+      takeName: InnerRing|OuterRingAction
+      internalID: 409615570293095465
+      firstFrame: 0
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -1014,7 +1340,7 @@ ModelImporter:
       takeName: CoreCentre|CoreCentreAction
       internalID: -2922323351013204651
       firstFrame: 0
-      lastFrame: 119
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -1072,7 +1398,7 @@ ModelImporter:
       takeName: CoreCentre|Cylinder.002Action
       internalID: -6616962934337522043
       firstFrame: 0
-      lastFrame: 119
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -1159,7 +1485,65 @@ ModelImporter:
       takeName: CoreCentre|InnerRingAction
       internalID: -2019480960796819575
       firstFrame: 0
-      lastFrame: 119
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoreCentre|InnerRingAction.001
+      takeName: CoreCentre|InnerRingAction.001
+      internalID: 2920408201858602021
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoreCentre|OuterRingAction
+      takeName: CoreCentre|OuterRingAction
+      internalID: -737538283362062538
+      firstFrame: 0
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
