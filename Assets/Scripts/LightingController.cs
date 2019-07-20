@@ -21,8 +21,7 @@ public class LightingController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         if (Time.time > nextActionTime)
         {
             nextActionTime += period;
