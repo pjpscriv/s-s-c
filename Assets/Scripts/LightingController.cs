@@ -9,6 +9,9 @@ public class LightingController : MonoBehaviour
     public Light NorthEastLight1;
     public Light NorthEastLight2;
 
+    private bool NEL1;
+    private bool NEL2;
+
     private float nextActionTime = 0.0f;
     public float period = 0.1f;
 
@@ -23,7 +26,12 @@ public class LightingController : MonoBehaviour
         if (Time.time > nextActionTime)
         {
             nextActionTime += period;
+            NEL1 = !NEL1;
+            NEL2 = !NEL2;
 
+            if (NEL1){NorthEastLight1.intensity = Random.Range(1.1f, 0.3f); ; }else{NorthEastLight1.intensity = Random.Range(0f, 0.4f); }
+
+            if (NEL2){NorthEastLight2.intensity = Random.Range(1.1f, 0.3f); ; }else{NorthEastLight2.intensity = Random.Range(0f,0.4f); }
         }
     }
 }
