@@ -302,6 +302,39 @@ Transform:
   m_Father: {fileID: 1414570171}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &523283810 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1347475181608959162, guid: 4daaada2de2117248b86db90ca6f414a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4153546510855474232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &523283811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523283810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cc1a87c08001bb4c9313c599fff5a4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 5
+  JumpHeight: 2
+  GroundDistance: 0.2
+  DashDistance: 5
+  Ground:
+    serializedVersion: 2
+    m_Bits: 256
+  sensitivity: 5
+  _body: {fileID: 0}
+  currentTool: {fileID: 0}
+  closestTool: {fileID: 0}
+  reach: 0
+  hands: {fileID: 2071316464}
+  player: {fileID: 0}
+  distanceHere: 0
 --- !u!1 &896311070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,6 +1061,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3825af69912534f438117a6e04fc8290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2071316464 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4153546511033813736, guid: 4daaada2de2117248b86db90ca6f414a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4153546510855474232}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2094008655
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,5 +1225,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4153546510758771709, guid: 4daaada2de2117248b86db90ca6f414a, type: 3}
+    - {fileID: 1347475181608959163, guid: 4daaada2de2117248b86db90ca6f414a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4daaada2de2117248b86db90ca6f414a, type: 3}
