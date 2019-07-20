@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     private bool _isGrounded = true;
     private Transform _groundChecker;
 
+    private List<iModule> modulesInRange;  
+
     void Start()
     {
         _groundChecker = transform.GetChild(0);
@@ -40,5 +42,14 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         _body.MovePosition(_body.position + _inputs * Speed * Time.fixedDeltaTime);
+    }
+
+    void OnTriggerEnter()
+    {
+        //add to list of nearby modules
+    }
+    void OTriggerExit()
+    {
+        //remove from list of nearby modules
     }
 }
