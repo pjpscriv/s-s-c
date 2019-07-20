@@ -57,13 +57,15 @@ public class Core : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha6)){ CurrentChange = 6; }
 
-        if ((Input.GetKeyDown(KeyCode.Equals)) || (Input.GetKeyDown(KeyCode.Minus))){
+        if ((Input.GetKey(KeyCode.Equals)) || (Input.GetKey(KeyCode.Minus)) || Input.GetKey(KeyCode.Plus) || Input.GetKey(KeyCode.Underscore))
+        {
             float mod = 0.0f;
-            if (Input.GetKeyDown(KeyCode.Equals)) {
-                mod = 2.5f;
+            if (Input.GetKey(KeyCode.Equals) || Input.GetKey(KeyCode.Plus)) {
+                mod = 1f;
             }
-            if (Input.GetKeyDown(KeyCode.Minus)){
-                mod = -5f;
+            if (Input.GetKey(KeyCode.Minus) || Input.GetKey(KeyCode.Underscore))
+            {
+                mod = -1f;
             }
 
             if(CurrentChange == 0){CoreHP += mod;}
