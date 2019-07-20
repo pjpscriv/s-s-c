@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 0
+  m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
@@ -1780,10 +1780,10 @@ MonoBehaviour:
   - {fileID: 825070261}
   - {fileID: 1774259793}
   - {fileID: 314902219}
+  - {fileID: 0}
   - {fileID: 2093245628}
   - {fileID: 2095351945}
-  Intensitys: []
-  LightStates: 
+  period: 0.1
 --- !u!1 &1153734612
 GameObject:
   m_ObjectHideFlags: 0
@@ -2025,13 +2025,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269900041}
-  m_LocalRotation: {x: 0.4676493, y: -0.54607993, z: 0.5261038, w: 0.4542198}
-  m_LocalPosition: {x: 5.74, y: -7.86, z: -23.45}
+  m_LocalRotation: {x: 0.5026594, y: -0.57597065, z: 0.49276233, w: 0.41566423}
+  m_LocalPosition: {x: 5.59, y: -8.62, z: -22.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1085733204}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 88.049, y: -173.223, z: -74.601006}
+  m_LocalEulerAnglesHint: {x: 80.234, y: -185.603, z: -86.94601}
 --- !u!108 &1269900043
 Light:
   m_ObjectHideFlags: 0
@@ -2089,7 +2089,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 9.1837e-41, y: -1.375e-42, z: 1.02e-43, w: NaN}
+  m_BoundingSphereOverride: {x: 4.5904e-41, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -3567,7 +3567,7 @@ GameObject:
   - component: {fileID: 2093245627}
   - component: {fileID: 2093245628}
   m_Layer: 0
-  m_Name: Main
+  m_Name: Main 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
