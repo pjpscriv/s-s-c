@@ -19,7 +19,7 @@ public class iModule : MonoBehaviour
     void Update()
     {
         RandDegrade();
-        UpdateProc();
+        //UpdateProc();
     }
 
     public void RandDegrade()
