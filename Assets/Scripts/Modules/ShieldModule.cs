@@ -6,6 +6,7 @@ public class ShieldModule : iModule
 
     public System.Boolean on;
     public float changeRate = 1.0f;
+    public GameObject shield;
 
     private float cooldownTimer;
 
@@ -32,6 +33,10 @@ public class ShieldModule : iModule
         if (cooldownTimer > 0) {
             cooldownTimer--;
         }
+
+        
+         shield.SetActive(on);
+        
 
     }
 

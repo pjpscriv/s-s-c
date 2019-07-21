@@ -10,9 +10,16 @@ public class iModule : MonoBehaviour
     float degradeChance = 0.1f;
     float procChance = 0.01f;
 
+    public string id;
+
     void start()
     {
 
+    }
+
+    public string getID()
+    {
+        return id;
     }
 
     // Update is called once per frame
