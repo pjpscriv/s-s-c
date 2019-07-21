@@ -134,7 +134,9 @@ public class PlayerController2 : MonoBehaviour
         //Find closest Module (if there is one)
         closestModule = FindClosestModule();
         currentModuleCode = closestModule.GetComponent<iModule>();
-        Debug.Log(closestModule);
+
+        // Debug.Log(closestModule);
+        
         //If closest Module is within interaction distance, display interaction button
         Vector3 distance = closestModule.transform.position - this.transform.position;
         if (distance.magnitude < reach) {

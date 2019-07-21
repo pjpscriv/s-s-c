@@ -42,7 +42,7 @@ public class UI : MonoBehaviour {
         GUIs[4] = plantGUI;
         GUIs[5] = portalGUI;
         GUIs[6] = coreGUI;
-        Debug.Log("Blocking: "+string.Join(", ", blocked));
+        Debug.Log("GUI Blocking: "+string.Join(", ", blocked));
     }
 
     void Update() {
@@ -97,7 +97,7 @@ public class UI : MonoBehaviour {
                 blocked.Add(candidate);
                 block(candidate);
                 // Grey out candidate in HUD
-                Debug.Log("Blocked "+candidate+".\nBlocking " + string.Join(", ", blocked));
+                Debug.Log("HUD Blocked "+candidate+".\nHUD Blocking [" + string.Join(", ", blocked)+"]");
             }
 
         // 2. Remove from blocked
@@ -109,7 +109,7 @@ public class UI : MonoBehaviour {
                 int removed = blocked[index];
                 blocked.RemoveAt(index);
                 Unblock(removed);
-                Debug.Log("Unblocked "+removed+"!\nBlocking: "+string.Join(", ", blocked));
+                Debug.Log("HUD Unblocked "+removed+"!\nHUD Blocking: ["+string.Join(", ", blocked)+"]");
             }
         }
     }
