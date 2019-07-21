@@ -48,7 +48,7 @@ public class Core : MonoBehaviour
         // Make sure values stay within limit. Possibly Redundant code?
         Temperature = boundvalues(Temperature, 0.0f, 100.0f);
         AI          = boundvalues(AI,          0.0f, 100.0f);
-        Electrical  = boundvalues(Electrical,  10.0f, 100.0f);
+        Electrical  = boundvalues(Electrical,  0.0f, 100.0f);
         Shields     = boundvalues(Shields,     0.0f, 100.0f);
         Plants      = boundvalues(Plants,      0.0f, 100.0f);
         Portals     = boundvalues(Portals,     0.0f, 100.0f);
