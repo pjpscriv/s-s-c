@@ -25,7 +25,6 @@ public class PlayerController2 : MonoBehaviour
     public GameObject closestTool;
     public float reach;
     public GameObject hands;
-    public GameObject player;
     public float distanceHere;
     private ToolID currentToolID;
 
@@ -53,14 +52,13 @@ public class PlayerController2 : MonoBehaviour
         Vector3 motion = forwardComp + sidewardComp;
         Vector3 rotation = transform.position + new Vector3(-Input.GetAxis(pValue + "RSX"), 0f, Input.GetAxis(pValue + "RSY"));
 
-
+        //Debug.Log(Input.GetAxis(pValue + "LSX"));
         _body.MovePosition(_body.position + motion * Speed);
 
         //_isGrounded = Physics.CheckSphere(_groundChecker.position, GroundDistance, Ground, QueryTriggerInteraction.Ignore);
 
         transform.LookAt(rotation);
-
-        interactButton.SetActive(false);
+        
         checkTool();
         checkModule();
     }
@@ -134,10 +132,13 @@ public class PlayerController2 : MonoBehaviour
         //Find closest Module (if there is one)
         closestModule = FindClosestModule();
         currentModuleCode = closestModule.GetComponent<iModule>();
-        Debug.Log(closestModule);
         //If closest Module is within interaction distance, display interaction button
         Vector3 distance = closestModule.transform.position - this.transform.position;
+        Debug.Log(distance.magnitude);
         if (distance.magnitude < reach) {
+
+            Debug.Log(currentModuleCode.getID());
+
             switch (currentModuleCode.getID()) {
                 case "AIModule": //AI
                     AIModule currentAIScript = closestModule.GetComponent<AIModule>();
@@ -216,6 +217,8 @@ public class PlayerController2 : MonoBehaviour
                 default: //Should never get here
                     break;
             }
+        } else {
+            interactButton.SetActive(false);
         }
     }
 

@@ -8,7 +8,7 @@ public class ShieldModule : iModule
     public float changeRate = 1.0f;
     public GameObject shield;
 
-    private float cooldownTimer;
+    private float cooldownTimer = 0f;
 
     // Use this for initialization
     void Start()
@@ -19,19 +19,24 @@ public class ShieldModule : iModule
     // Update is called once per frame
     void Update()
     {
+
+        Debug.Log("Current charge is " + cooldownTimer);
         if (on) {
-            changeCondition(-changeRate*2.0f);
+            changeCondition(-changeRate*1.0f);
         } else if (cooldownTimer <= 0){
             changeCondition(changeRate);
         }
 
         if (getCondition() <= 0f) {
-            setCondition(0f);
+            setCondition(1f);
             cooldownTimer = 100f;
+            on = false;
         }
 
         if (cooldownTimer > 0) {
             cooldownTimer--;
+        } else {
+            cooldownTimer = 0;
         }
 
         
@@ -44,8 +49,8 @@ public class ShieldModule : iModule
     {
         if (on == true) {
             on = false;
-        } else if (on == false && cooldownTimer < 0) {
-            on = false;
+        } else if (on == false && cooldownTimer <= 0) {
+            on = true;
         }
     }
 }
