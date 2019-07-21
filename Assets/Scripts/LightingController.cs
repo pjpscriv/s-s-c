@@ -53,6 +53,14 @@ public class LightingController : MonoBehaviour
                     }
                 }
             }
+            else
+            {
+                for (int i = 0; i < numlights; i++)
+                {
+                    //NormalLights[i].intensity = Intensitys[i];
+                    LightStates[i] = 0;
+                }
+            }
         }
             if (Time.time > FlickerLightActionTime)
             {
