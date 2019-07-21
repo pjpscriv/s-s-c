@@ -3319,20 +3319,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7287f9b02d6498d418cccdff3fb94511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoreStat: {fileID: 463039761}
+  coreGUI: {fileID: 463039761}
   tempGUI: {fileID: 1692226445}
   aiGUI: {fileID: 1966813707}
   elecGUI: {fileID: 294837749}
   shieldGUI: {fileID: 1642300359}
   plantGUI: {fileID: 755372352}
   portalGUI: {fileID: 1325630156}
-  coreImg: {fileID: 1694191049}
-  tempImg: {fileID: 712568544}
-  aiImg: {fileID: 1448133082}
-  elecImg: {fileID: 453522303}
-  shieldImg: {fileID: 1607115983}
-  plantImg: {fileID: 493565504}
-  portalImg: {fileID: 1584415798}
 --- !u!114 &1854601815
 MonoBehaviour:
   m_ObjectHideFlags: 0
