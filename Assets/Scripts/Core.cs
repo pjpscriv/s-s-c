@@ -24,8 +24,8 @@ public class Core : MonoBehaviour
     public float Plants = 100.0f;
     public float Portals = 100.0f;
 
-    // Debug
-    int CurrentChange = 3;
+    //Debug values
+    private int CurrentChange = 3; //change electricty 
 
     void Start()
     {

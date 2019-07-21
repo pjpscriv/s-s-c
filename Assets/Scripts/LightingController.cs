@@ -35,6 +35,11 @@ public class LightingController : MonoBehaviour
     void Update() {
         Core core = GameObject.FindGameObjectWithTag("GameController").GetComponent<Core>();
         electrical = core.Electrical;
+
+        if (electrical < 20){
+            electrical = 20;
+        }
+
         if (Time.time > CheckLightActionTime)
         {
             CheckLightActionTime += CheckLightsperiod;
