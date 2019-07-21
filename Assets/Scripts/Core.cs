@@ -4,8 +4,18 @@ using UnityEngine;
 
 public class Core : MonoBehaviour
 {
-    int CurrentChange = 3; //which value to change, default 3 (Electrical) 
-    // Start is called before the first frame update
+    // Core Damage Settings
+    public float coreDamageRate = 1.0f;
+
+    // Links to Modules
+    public iModule TemperatureModule;
+    public iModule AIModule;
+    public iModule ElectricalModule;
+    public iModule ShieldModule;
+    public iModule PlantModule;
+    public iModule PortalModule;
+
+    // Local Core State Values
     public float CoreHP = 100.0f; //overall core health 
     public float Temperature = 24.0f; //temp, in deg C
     public float AI = 90.0f;
@@ -16,34 +26,75 @@ public class Core : MonoBehaviour
 
     void Start()
     {
-        
+        // Set default Debug val to 3 (Electrical)
+        int CurrentChange = 3;  
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Debug Values Change.
+        // TODO: Remove. This is irrelevant as Core reads from modules
         debugchangeval();
 
-        CoreHP = boundvalues(CoreHP, 0.0f, 100.0f);
+        // Pull Values from Modules
+
+        // TODO: Uncomment when Modules get linked.
+        // getModuleValues();
+
+        // Make sure values stay within limit. Possibly Redundant code?
         Temperature = boundvalues(Temperature, 0.0f, 100.0f);
-        AI = boundvalues(AI, 0.0f, 100.0f);
-        Electrical = boundvalues(Electrical, 0.0f, 100.0f);
-        Shields = boundvalues(Shields, 0.0f, 100.0f);
-        Plants = boundvalues(Plants, 0.0f, 100.0f);
-        Portals = boundvalues(Portals, 0.0f, 100.0f);
+        AI          = boundvalues(AI,          0.0f, 100.0f);
+        Electrical  = boundvalues(Electrical,  0.0f, 100.0f);
+        Shields     = boundvalues(Shields,     0.0f, 100.0f);
+        Plants      = boundvalues(Plants,      0.0f, 100.0f);
+        Portals     = boundvalues(Portals,     0.0f, 100.0f);
+
+        updateCoreHealth();
     }
 
-    float boundvalues(float val,float min,float max) {
-        if(val < min){
-            val = min;
-        }else if (val > max){
-            val = max;
+    void getModuleValues() {
+        Temperature = TemperatureModule.getCondition();
+        AI          = AIModule.getCondition();
+        Electrical  = ElectricalModule.getCondition();
+        Shields     = ShieldModule.getCondition();
+        Plants      = PlantModule.getCondition();
+        Portals     = PortalModule.getCondition();
+    }
+
+    float boundvalues(float val, float min, float max) {
+        if (val < min) {
+            return min;
+        } else if (val > max) {
+            return max;
         }
-        return val;
+    }
+
+    void updateCoreHealth() {
+
+        int multiplier = deadModules();
+
+        // UPDATE CORE HEALTH HERE !!!!
+        CoreHP -= coreDamageRate * (multiplier - 1);
+
+        // (within the bounds ofc)
+        CoreHP = boundvalues(CoreHP, 0.0f, 100.0f);
+    }
+
+    int deadModules() {
+        int deadMods = 0;
+        if (Temperature < 5f || Temperature > 95f) { deadMods++; }
+        if (AI < 5f) { deadMods++; }
+        if (Electrical < 5f) { deadMods++; }
+        // I don't think shield actually hurt the core.
+        if (Shields > 95f) { deadMods++; } // Overheated maybe?
+        if (Plants > 95f) { deadMods++; }
+        if (Portals < 5f) { deadMods++; }
+        return deadMods;
     }
 
     void debugchangeval(){
-        // Which Station changing
+        
         if (Input.GetKeyDown(KeyCode.Alpha0)){ CurrentChange = 0; }
         if (Input.GetKeyDown(KeyCode.Alpha1)){ CurrentChange = 1; }
         if (Input.GetKeyDown(KeyCode.Alpha2)){ CurrentChange = 2; }
