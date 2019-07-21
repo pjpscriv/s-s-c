@@ -7,6 +7,7 @@ public class Temperature : iModule
 
     public float rateOfChange;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,12 +26,12 @@ public class Temperature : iModule
 
     }
 
-    void setChangeOfTemp(float input)
+    public void setChangeOfTemp(float input)
     {
         rateOfChange = input;
     }
 
-    void addChangeOfTemp(float input)
+    public void addChangeOfTemp(float input)
     {
         rateOfChange = rateOfChange + input;
     }
