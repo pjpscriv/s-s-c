@@ -60,4 +60,9 @@ public class iModule : MonoBehaviour
     {
         condition = input;
     }
+
+    internal float getCondition()
+    {
+        return condition;
+    }
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ElectricPlug : iModule
+public class ElectricSocket : iModule
 {
 
     public GameObject battery;
