@@ -8,6 +8,7 @@ TagManager:
   - Tool
   - HUD
   - GUI-Bar
+  - Plant
   layers:
   - Default
   - TransparentFX

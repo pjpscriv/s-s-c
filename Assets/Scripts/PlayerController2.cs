@@ -53,6 +53,7 @@ public class PlayerController2 : MonoBehaviour
         Vector3 motion = forwardComp + sidewardComp;
         Vector3 rotation = transform.position + new Vector3(-Input.GetAxis(pValue + "RSX"), 0f, Input.GetAxis(pValue + "RSY"));
 
+
         _body.MovePosition(_body.position + motion * Speed);
 
         //_isGrounded = Physics.CheckSphere(_groundChecker.position, GroundDistance, Ground, QueryTriggerInteraction.Ignore);
