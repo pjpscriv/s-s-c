@@ -32,7 +32,7 @@ public class BatteryMechanic : MonoBehaviour
     public void charge()
     {
         if (batteryLevel < maxBattery) {
-            batteryLevel = batteryLevel + chargeRate;
+            batteryLevel = batteryLevel + chargeRate;            
         }
         if (batteryLevel > maxBattery) {
             batteryLevel = maxBattery;

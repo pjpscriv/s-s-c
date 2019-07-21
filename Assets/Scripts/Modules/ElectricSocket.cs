@@ -21,14 +21,23 @@ public class ElectricSocket : iModule
         }
     }
 
-    void putInBattery (GameObject newBattery)
+    public void putInBattery (GameObject newBattery)
     {
         battery = newBattery;
         batteryMechanicScript = battery.GetComponent<BatteryMechanic>();
         //Get transform of battery location and place new battery there.
     }
 
-    GameObject removeBattery()
+    public System.Boolean hasBattery()
+    {
+        if (battery != null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public GameObject removeBattery()
     {
         GameObject returnBattery = battery;
         battery = null;
