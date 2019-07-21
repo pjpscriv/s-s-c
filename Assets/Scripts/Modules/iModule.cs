@@ -4,7 +4,7 @@ using System.Collections;
 public class iModule : MonoBehaviour
 {
 
-    float condition;
+    float condition = 100f;
 
     //%ages out of 100%
     float degradeChance = 0.1f;

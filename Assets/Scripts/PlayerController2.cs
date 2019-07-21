@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerController2 : MonoBehaviour
 {
-    public float Speed = 5f;
+    public float Speed = 15f;
     public float JumpHeight = 2f;
     public float GroundDistance = 0.2f;
     public float DashDistance = 5f;
@@ -52,6 +52,7 @@ public class PlayerController2 : MonoBehaviour
 
         Vector3 motion = forwardComp + sidewardComp;
         Vector3 rotation = transform.position + new Vector3(-Input.GetAxis(pValue + "RSX"), 0f, Input.GetAxis(pValue + "RSY"));
+
 
         _body.MovePosition(_body.position + motion * Speed);
 
@@ -133,6 +134,7 @@ public class PlayerController2 : MonoBehaviour
         //Find closest Module (if there is one)
         closestModule = FindClosestModule();
         currentModuleCode = closestModule.GetComponent<iModule>();
+        Debug.Log(closestModule);
         //If closest Module is within interaction distance, display interaction button
         Vector3 distance = closestModule.transform.position - this.transform.position;
         if (distance.magnitude < reach) {

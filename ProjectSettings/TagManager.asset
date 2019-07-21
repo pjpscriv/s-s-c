@@ -8,6 +8,7 @@ TagManager:
   - Tool
   - HUD
   - GUI-Bar
+  - Plant
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
+  - Sheild
+  - SpaceStuff
   - 
   - 
   - 
