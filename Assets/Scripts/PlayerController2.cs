@@ -38,17 +38,29 @@ public class PlayerController2 : MonoBehaviour
 
     void Update()
     {
+<<<<<<< Updated upstream
         Vector3 forwardComp = transform.forward * Input.GetAxis(pValue + "LSY") * sensitivity;
         Vector3 sidewardComp = transform.right * Input.GetAxis(pValue + "LSX") * sensitivity;
 
         Vector3 motion = forwardComp + sidewardComp;
         Vector3 rotation = new Vector3(0f, Input.GetAxis(pValue + "RSX"));
+=======
+        Vector3 forwardComp = Vector3.forward * Input.GetAxis(pValue + "LSY");
+        Vector3 sidewardComp = Vector3.right * Input.GetAxis(pValue + "LSX");
 
-        _body.AddForce(motion);
+        Vector3 motion = forwardComp + sidewardComp;
+        Vector3 rotation = transform.position + new Vector3(-Input.GetAxis(pValue + "RSX"), 0f, Input.GetAxis(pValue + "RSY"));
+>>>>>>> Stashed changes
+
+        _body.MovePosition(_body.position + motion * Speed);
 
         //_isGrounded = Physics.CheckSphere(_groundChecker.position, GroundDistance, Ground, QueryTriggerInteraction.Ignore);
 
+<<<<<<< Updated upstream
         _body.AddTorque(rotation);
+=======
+        transform.LookAt(rotation);
+>>>>>>> Stashed changes
 
         checkTool();
     }
@@ -132,6 +144,6 @@ public class PlayerController2 : MonoBehaviour
 
     void FixedUpdate()
     {
-        //_body.MovePosition(_body.position + _inputs * Speed * Time.fixedDeltaTime);
+        
     }
 }
