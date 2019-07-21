@@ -25,7 +25,7 @@ public class Core : MonoBehaviour
         debugchangeval();
 
         CoreHP = boundvalues(CoreHP, 0.0f, 100.0f);
-        Temperature = boundvalues(Temperature, -10.0f, 50.0f);
+        Temperature = boundvalues(Temperature, 0.0f, 100.0f);
         AI = boundvalues(AI, 0.0f, 100.0f);
         Electrical = boundvalues(Electrical, 0.0f, 100.0f);
         Shields = boundvalues(Shields, 0.0f, 100.0f);
@@ -43,18 +43,13 @@ public class Core : MonoBehaviour
     }
 
     void debugchangeval(){
+        // Which Station changing
         if (Input.GetKeyDown(KeyCode.Alpha0)){ CurrentChange = 0; }
-
         if (Input.GetKeyDown(KeyCode.Alpha1)){ CurrentChange = 1; }
-
         if (Input.GetKeyDown(KeyCode.Alpha2)){ CurrentChange = 2; }
-
         if (Input.GetKeyDown(KeyCode.Alpha3)){ CurrentChange = 3; }
-
         if (Input.GetKeyDown(KeyCode.Alpha4)){ CurrentChange = 4; }
-
         if (Input.GetKeyDown(KeyCode.Alpha5)){ CurrentChange = 5; }
-
         if (Input.GetKeyDown(KeyCode.Alpha6)){ CurrentChange = 6; }
 
         if ((Input.GetKey(KeyCode.Equals)) || (Input.GetKey(KeyCode.Minus)) || Input.GetKey(KeyCode.Plus) || Input.GetKey(KeyCode.Underscore))
@@ -68,7 +63,7 @@ public class Core : MonoBehaviour
                 mod = -1f;
             }
 
-            if(CurrentChange == 0){CoreHP += mod;}
+            if(CurrentChange == 0) { CoreHP += mod; }
             if(CurrentChange == 1) { Temperature += mod; }
             if(CurrentChange == 2) { AI += mod; }
             if(CurrentChange == 3) { Electrical += mod; }
