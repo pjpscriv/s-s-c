@@ -302,7 +302,6 @@ Transform:
   m_Father: {fileID: 1414570171}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
 --- !u!1 &523283810 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1347475181608959162, guid: 4daaada2de2117248b86db90ca6f414a,
@@ -343,8 +342,6 @@ Rigidbody:
     type: 3}
   m_PrefabInstance: {fileID: 4153546510855474232}
   m_PrefabAsset: {fileID: 0}
-=======
->>>>>>> Stashed changes
 --- !u!1 &896311070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1071,6 +1068,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3825af69912534f438117a6e04fc8290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2071316464 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4153546511033813736, guid: 4daaada2de2117248b86db90ca6f414a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4153546510855474232}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2094008655
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,7 +1232,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
     - target: {fileID: 1347475181608959164, guid: 4daaada2de2117248b86db90ca6f414a,
         type: 3}
       propertyPath: m_AngularDrag
@@ -1243,7 +1245,4 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4153546510758771709, guid: 4daaada2de2117248b86db90ca6f414a, type: 3}
     - {fileID: 1347475181608959163, guid: 4daaada2de2117248b86db90ca6f414a, type: 3}
-=======
-    m_RemovedComponents: []
->>>>>>> Stashed changes
   m_SourcePrefab: {fileID: 100100000, guid: 4daaada2de2117248b86db90ca6f414a, type: 3}

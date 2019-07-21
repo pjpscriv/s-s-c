@@ -13,6 +13,7 @@ public class PlantSpawner : MonoBehaviour
     public float max_range = 1f;
 
     private List<GameObject> plants = new List<GameObject>();
+    public int maxSpawnedPlants = 5;
 
     private BoxCollider bx;
 
@@ -44,10 +45,13 @@ public class PlantSpawner : MonoBehaviour
     public void SpawnPlant(Transform tf)
     {
         bool spawned = false;
+        int loopAvoider = 10;
 
-        while (!spawned)
+        while (!spawned && loopAvoider-- > 0)
         {
-            Vector2 pos = Vector2.one * Random.RandomRange(min_range, max_range);
+            float scale = Random.Range(min_range, max_range);
+
+            Vector2 pos = Vector2.one * Random.Range(min_range, max_range);
 
             float ray_x = pos.x + tf.position.x;
             float ray_z = pos.y + tf.position.z;
@@ -60,7 +64,7 @@ public class PlantSpawner : MonoBehaviour
             {
                 //Debug.DrawRay(origin, -Vector3.up * hit.distance, Color.yellow);
                 //Debug.Log("Did Hit");
-                if (plants.Count < 50)
+                if (plants.Count < maxSpawnedPlants)
                 {
                     GameObject spawn = Instantiate(ppfb1);
                     plants.Add(spawn);

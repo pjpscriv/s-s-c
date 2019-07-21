@@ -16,6 +16,7 @@ public class PlantModule : iModule
     // Update is called once per frame
     void Update()
     {
+        RandDegrade();
         CheckCondition();
         CheckHP();
     }
@@ -23,15 +24,21 @@ public class PlantModule : iModule
     void CheckCondition()
     {
         float condition = getCondition();
+        Debug.Log("Tree: " + name + " condition is: " + condition);
 
         if(condition < thirstThreshold)
         {
-            if (RandProc()) spawner.SpawnPlant(transform);
+            if (RandProc())
+            {
+                Debug.Log("RandProc " + name);
+                spawner.SpawnPlant(transform);
+            }
         }
     }
 
     void CheckHP()
     {
+        Debug.Log("Tree: " + name + " HP is: " + HP);
         if (HP <= 0) Destroy(gameObject);
     }
 

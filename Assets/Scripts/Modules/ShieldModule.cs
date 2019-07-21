@@ -6,9 +6,11 @@ public class ShieldModule : iModule
 
     public System.Boolean on;
     public float changeRate = 1.0f;
-    public GameObject shield;
+<<<<<<< HEAD
 
     private float cooldownTimer = 0f;
+=======
+>>>>>>> master
 
     // Use this for initialization
     void Start()
@@ -22,6 +24,7 @@ public class ShieldModule : iModule
 
         Debug.Log("Current charge is " + cooldownTimer);
         if (on) {
+<<<<<<< HEAD
             changeCondition(-changeRate*1.0f);
         } else if (cooldownTimer <= 0){
             changeCondition(changeRate);
@@ -43,14 +46,24 @@ public class ShieldModule : iModule
          shield.SetActive(on);
         
 
+=======
+            changeCondition(-changeRate*2.0f);
+        } else {
+            changeCondition(changeRate);
+        }
+>>>>>>> master
     }
 
     public void changeShield()
     {
+<<<<<<< HEAD
         if (on == true) {
             on = false;
         } else if (on == false && cooldownTimer <= 0) {
             on = true;
         }
+=======
+        on = !on;
+>>>>>>> master
     }
 }

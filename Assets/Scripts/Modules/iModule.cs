@@ -4,17 +4,17 @@ using System.Collections;
 public class iModule : MonoBehaviour
 {
 
-    float condition = 100f;
+    float condition;
 
     //%ages out of 100%
     float degradeChance = 0.1f;
-    float procChance = 0.01f;
+    float procChance = 3f;
 
     public string id;
 
-    void start()
+    public string getID()
     {
-
+        return id;
     }
 
     public string getID()
@@ -31,11 +31,16 @@ public class iModule : MonoBehaviour
 
     public void RandDegrade()
     {
-        if(Random.Range(0f, 100f) < degradeChance)
+        float r_value = Random.Range(0f, 100f);
+        Debug.Log("RandDegrade check: " + r_value);
+        if (r_value < degradeChance)
         {
-            condition = ClampCondition(condition--);
-            degradeChance = 0.1f + ((100f - condition) / 3f);
+            Debug.Log("RandDegrade procced");
+            condition--;
+            condition = ClampCondition(condition);
+            degradeChance = 3f + ((100f - condition) / 20f);
         }
+        else { Debug.Log(degradeChance - r_value); }
     }
 
     //rolls a random chance to 
@@ -66,10 +71,5 @@ public class iModule : MonoBehaviour
     internal void setCondition (float input)
     {
         condition = input;
-    }
-
-    internal float getCondition()
-    {
-        return condition;
     }
 }

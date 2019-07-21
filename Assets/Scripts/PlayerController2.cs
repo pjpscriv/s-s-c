@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerController2 : MonoBehaviour
 {
-    public float Speed = 15f;
+    public float Speed = 5f;
     public float JumpHeight = 2f;
     public float GroundDistance = 0.2f;
     public float DashDistance = 5f;
@@ -20,7 +20,7 @@ public class PlayerController2 : MonoBehaviour
     private bool _isGrounded = true;
     private Transform _groundChecker;
 
-    //Tool Interactor:
+    //Tool Creator
     public GameObject currentTool;
     public GameObject closestTool;
     public float reach;
@@ -28,30 +28,29 @@ public class PlayerController2 : MonoBehaviour
     public float distanceHere;
     private ToolID currentToolID;
 
-    //Module Interactor:
+<<<<<<< HEAD
+
     public GameObject closestModule;
-    private iModule currentModuleCode;
+    private ModuleCode currentModuleCode;
 
-    //Player Interface:
-    public GameObject interactButton;
-
+=======
+>>>>>>> master
     void Start()
     {
         _groundChecker = transform.GetChild(0);
         _body = GetComponent<Rigidbody>();
         currentTool = null;
-        interactButton.SetActive(false);
     }
 
     void Update()
     {
-
-        Vector3 forwardComp = Vector3.forward * Input.GetAxis(pValue + "LSY");
-        Vector3 sidewardComp = Vector3.right * Input.GetAxis(pValue + "LSX");
+        Vector3 forwardComp = transform.forward * Input.GetAxis(pValue + "LSY") * sensitivity;
+        Vector3 sidewardComp = transform.right * Input.GetAxis(pValue + "LSX") * sensitivity;
 
         Vector3 motion = forwardComp + sidewardComp;
-        Vector3 rotation = transform.position + new Vector3(-Input.GetAxis(pValue + "RSX"), 0f, Input.GetAxis(pValue + "RSY"));
+        Vector3 rotation = new Vector3(0f, Input.GetAxis(pValue + "RSX"));
 
+<<<<<<< HEAD
         //Debug.Log(Input.GetAxis(pValue + "LSX"));
         _body.MovePosition(_body.position + motion * Speed);
 
@@ -59,8 +58,15 @@ public class PlayerController2 : MonoBehaviour
 
         transform.LookAt(rotation);
         
+=======
+        _body.AddForce(motion);
+
+        //_isGrounded = Physics.CheckSphere(_groundChecker.position, GroundDistance, Ground, QueryTriggerInteraction.Ignore);
+
+        _body.AddTorque(rotation);
+
+>>>>>>> master
         checkTool();
-        checkModule();
     }
 
     void checkTool()
@@ -80,8 +86,13 @@ public class PlayerController2 : MonoBehaviour
             distanceHere = distance.magnitude;
             if (distance.magnitude < reach) {
                 //If closest Tool is within pickup distance and button is pushed, attach tool to player, and say player now has that tool (also display on UI)
-                if (Input.GetButtonDown(pValue + "B") && currentTool == null) {
-                    pickUpTool(closestTool);
+                if (Input.GetButtonDown(pValue + "b") && currentTool == null) {
+                    currentTool = closestTool;
+                    Rigidbody body = currentTool.GetComponent<Rigidbody>();
+                    body.isKinematic = true;
+                    currentTool.transform.position = hands.transform.position;
+                    currentTool.transform.rotation = Quaternion.LookRotation(this.transform.forward, transform.up);
+                    currentTool.transform.SetParent(hands.transform);
                 }
             }
         }
@@ -117,6 +128,7 @@ public class PlayerController2 : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
     void pickUpTool(GameObject closestTool)
     {
         currentTool = closestTool;
@@ -222,6 +234,8 @@ public class PlayerController2 : MonoBehaviour
         }
     }
 
+=======
+>>>>>>> master
     public GameObject FindClosestTool()
     {
         GameObject[] gos;
@@ -240,26 +254,8 @@ public class PlayerController2 : MonoBehaviour
         return closest;
     }
 
-    public GameObject FindClosestModule()
-    {
-        GameObject[] gos;
-        gos = GameObject.FindGameObjectsWithTag("Module");
-        GameObject closest = null;
-        float distance = Mathf.Infinity;
-        Vector3 position = transform.position;
-        foreach (GameObject go in gos) {
-            Vector3 diff = go.transform.position - position;
-            float curDistance = diff.sqrMagnitude;
-            if (curDistance < distance) {
-                closest = go;
-                distance = curDistance;
-            }
-        }
-        return closest;
-    }
-
     void FixedUpdate()
     {
-        
+        //_body.MovePosition(_body.position + _inputs * Speed * Time.fixedDeltaTime);
     }
 }

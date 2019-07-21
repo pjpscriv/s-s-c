@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ElectricSocket : iModule
+public class ElectricPlug : iModule
 {
 
     public GameObject battery;
@@ -21,23 +21,14 @@ public class ElectricSocket : iModule
         }
     }
 
-    public void putInBattery (GameObject newBattery)
+    void putInBattery (GameObject newBattery)
     {
         battery = newBattery;
         batteryMechanicScript = battery.GetComponent<BatteryMechanic>();
         //Get transform of battery location and place new battery there.
     }
 
-    public System.Boolean hasBattery()
-    {
-        if (battery != null) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public GameObject removeBattery()
+    GameObject removeBattery()
     {
         GameObject returnBattery = battery;
         battery = null;

@@ -14,7 +14,7 @@ public class BatteryMechanic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        batteryLevel = 80f;        
+        batteryLevel = 100f;        
     }
 
     //Called each frame by the Battery Socket Module while this battery has charge
@@ -32,7 +32,7 @@ public class BatteryMechanic : MonoBehaviour
     public void charge()
     {
         if (batteryLevel < maxBattery) {
-            batteryLevel = batteryLevel + chargeRate;            
+            batteryLevel = batteryLevel + chargeRate;
         }
         if (batteryLevel > maxBattery) {
             batteryLevel = maxBattery;
