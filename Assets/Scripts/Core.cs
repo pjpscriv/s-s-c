@@ -24,6 +24,9 @@ public class Core : MonoBehaviour
     public float Plants = 100.0f;
     public float Portals = 100.0f;
 
+    //Debug values
+    private int CurrentChange = 3; //change electricty 
+
     void Start()
     {
         // Set default Debug val to 3 (Electrical)
@@ -68,6 +71,7 @@ public class Core : MonoBehaviour
         } else if (val > max) {
             return max;
         }
+        return val;
     }
 
     void updateCoreHealth() {

@@ -33,7 +33,6 @@ public class AstoroidController : MonoBehaviour
                 nextActionTime += period;
                 period = 3.0f + Random.Range(Mintime, Maxtime);
                 int randompos = (int)Random.Range(0, Crashpos.Length);
-                print(Crashpos[randompos]);
                 transform.position = (Crashpos[randompos]);
                 fallingstate = 1;
             }
