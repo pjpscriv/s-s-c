@@ -1,5 +1,33 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &523283811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347475181608959162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cc1a87c08001bb4c9313c599fff5a4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 0.1
+  JumpHeight: 2
+  GroundDistance: 0.2
+  DashDistance: 5
+  Ground:
+    serializedVersion: 2
+    m_Bits: 256
+  sensitivity: 5
+  pValue: P1
+  _body: {fileID: 0}
+  currentTool: {fileID: 0}
+  closestTool: {fileID: 0}
+  reach: 0
+  hands: {fileID: 4153546511033813736}
+  player: {fileID: 0}
+  distanceHere: 0
 --- !u!1001 &4153546512029552631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67,5 +95,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3105070323467383627, guid: fb2a4dd76907fdb40ad6cdd81bc06a1e,
+        type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1547924490, guid: fb2a4dd76907fdb40ad6cdd81bc06a1e, type: 3}
+    - {fileID: 3105070323467383628, guid: fb2a4dd76907fdb40ad6cdd81bc06a1e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fb2a4dd76907fdb40ad6cdd81bc06a1e, type: 3}
+--- !u!1 &1347475181608959162 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3105070323467383629, guid: fb2a4dd76907fdb40ad6cdd81bc06a1e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4153546512029552631}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4153546511033813736 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1269712159, guid: fb2a4dd76907fdb40ad6cdd81bc06a1e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4153546512029552631}
+  m_PrefabAsset: {fileID: 0}
