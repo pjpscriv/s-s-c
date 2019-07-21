@@ -8,12 +8,12 @@ public class Core : MonoBehaviour
     public float coreDamageRate = 1.0f;
 
     // Links to Modules
-    public iModule TemperatureModule;
-    public iModule AIModule;
-    public iModule ElectricalModule;
-    public iModule ShieldModule;
-    public iModule PlantModule;
-    public iModule PortalModule;
+    // public iModule TemperatureModule;
+    // public iModule AIModule;
+    // public iModule ElectricalModule;
+    // public iModule ShieldModule;
+    // public iModule PlantModule;
+    // public iModule PortalModule;
 
     // Local Core State Values
     public float CoreHP = 100.0f; //overall core health 
@@ -24,10 +24,13 @@ public class Core : MonoBehaviour
     public float Plants = 100.0f;
     public float Portals = 100.0f;
 
+    // Debug
+    int CurrentChange = 3;
+
     void Start()
     {
         // Set default Debug val to 3 (Electrical)
-        int CurrentChange = 3;  
+        CurrentChange = 3;  
     }
 
     // Update is called once per frame
@@ -50,24 +53,25 @@ public class Core : MonoBehaviour
         Plants      = boundvalues(Plants,      0.0f, 100.0f);
         Portals     = boundvalues(Portals,     0.0f, 100.0f);
 
-        updateCoreHealth();
+        // updateCoreHealth();
     }
 
     void getModuleValues() {
-        Temperature = TemperatureModule.getCondition();
-        AI          = AIModule.getCondition();
-        Electrical  = ElectricalModule.getCondition();
-        Shields     = ShieldModule.getCondition();
-        Plants      = PlantModule.getCondition();
-        Portals     = PortalModule.getCondition();
+        // Temperature = TemperatureModule.getCondition();
+        // AI          = AIModule.getCondition();
+        // Electrical  = ElectricalModule.getCondition();
+        // Shields     = ShieldModule.getCondition();
+        // Plants      = PlantModule.getCondition();
+        // Portals     = PortalModule.getCondition();
     }
 
     float boundvalues(float val, float min, float max) {
         if (val < min) {
-            return min;
+            val = min;
         } else if (val > max) {
-            return max;
+            val = max;
         }
+        return val;
     }
 
     void updateCoreHealth() {

@@ -18,7 +18,7 @@ public class PlantSpawner : MonoBehaviour
     {
         bx = GetComponent<BoxCollider>();
 
-        bx.
+        
     }
 
     public void SpawnPlant()
