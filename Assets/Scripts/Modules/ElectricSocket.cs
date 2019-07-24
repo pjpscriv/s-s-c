@@ -10,7 +10,7 @@ public class ElectricSocket : iModule
     // Use this for initialization
     void Start()
     {
-
+        setCondition(100f);
     }
 
     // Update is called once per frame
@@ -19,6 +19,9 @@ public class ElectricSocket : iModule
         if (battery != null) {
             batteryMechanicScript.decharge();
         }
+
+        changeCondition(-0.01f);
+
     }
 
     public void putInBattery (GameObject newBattery)

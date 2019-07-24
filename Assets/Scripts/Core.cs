@@ -7,13 +7,13 @@ public class Core : MonoBehaviour
     // Core Damage Settings
     public float coreDamageRate = 1.0f;
 
-    // Links to Modules
-    // public iModule TemperatureModule;
-    // public iModule AIModule;
-    // public iModule ElectricalModule;
-    // public iModule ShieldModule;
-    // public iModule PlantModule;
-    // public iModule PortalModule;
+    // Links to GameObjects
+    // public GameObject TemperatureStation
+    public GameObject AIStation;
+    public GameObject ElectricalStation;
+    public GameObject ShieldStation;
+    public GameObject PlantStation;
+    public GameObject PortalStation;
 
     // Local Core State Values
     public float CoreHP = 100.0f; //overall core health 
@@ -41,9 +41,7 @@ public class Core : MonoBehaviour
         debugchangeval();
 
         // Pull Values from Modules
-
-        // TODO: Uncomment when Modules get linked.
-        // getModuleValues();
+        getModuleValues();
 
         // Make sure values stay within limit. Possibly Redundant code?
         Temperature = boundvalues(Temperature, 0.0f, 100.0f);
@@ -53,11 +51,22 @@ public class Core : MonoBehaviour
         Plants      = boundvalues(Plants,      0.0f, 100.0f);
         Portals     = boundvalues(Portals,     0.0f, 100.0f);
 
-        // updateCoreHealth();
+        updateCoreHealth();
     }
 
     void getModuleValues() {
-        // Temperature = TemperatureModule.getCondition();
+
+        // object.GetComponent<iModule>().
+
+        // Temperature = TemperatureStation.GetComponent<iModule>().getCondition();
+        // Electrical = AIStation.GetComponent<iModule>().getCondition();
+        Electrical = ElectricalStation.GetComponent<iModule>().getCondition();
+
+        Shields = ShieldStation.GetComponent<iModule>().getCondition();
+        Plants  = PlantStation.GetComponent<iModule>().getCondition();
+        Portals = PortalStation.GetComponent<iModule>().getCondition();
+
+
         // AI          = AIModule.getCondition();
         // Electrical  = ElectricalModule.getCondition();
         // Shields     = ShieldModule.getCondition();
