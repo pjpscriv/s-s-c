@@ -5,7 +5,7 @@ using UnityEngine;
 public class Core : MonoBehaviour
 {
     // Core Damage Settings
-    public float coreDamageRate = 1.0f;
+    public float coreDamageRate = 0.05f;
 
     // Links to GameObjects
     // public GameObject TemperatureStation
@@ -56,16 +56,13 @@ public class Core : MonoBehaviour
 
     void getModuleValues() {
 
-        // object.GetComponent<iModule>().
-
+        // Does nothing ATM
         // Temperature = TemperatureStation.GetComponent<iModule>().getCondition();
-        // Electrical = AIStation.GetComponent<iModule>().getCondition();
-        Electrical = ElectricalStation.GetComponent<iModule>().getCondition();
-
-        Shields = ShieldStation.GetComponent<iModule>().getCondition();
-        Plants  = PlantStation.GetComponent<iModule>().getCondition();
-        Portals = PortalStation.GetComponent<iModule>().getCondition();
-
+        // AI          = AIStation.GetComponent<iModule>().getCondition();
+        // Electrical  = ElectricalStation.GetComponent<iModule>().getCondition();
+        // Shields     = ShieldStation.GetComponent<iModule>().getCondition();
+        // Plants      = PlantStation.GetComponent<iModule>().getCondition();
+        // Portals     = PortalStation.GetComponent<iModule>().getCondition();
 
         // AI          = AIModule.getCondition();
         // Electrical  = ElectricalModule.getCondition();
@@ -99,7 +96,7 @@ public class Core : MonoBehaviour
         if (Temperature < 5f || Temperature > 95f) { deadMods++; }
         if (AI < 5f) { deadMods++; }
         if (Electrical < 5f) { deadMods++; }
-        // I don't think shield actually hurt the core.
+        // I don't think shields actually hurt the core.
         if (Shields > 95f) { deadMods++; } // Overheated maybe?
         if (Plants > 95f) { deadMods++; }
         if (Portals < 5f) { deadMods++; }
