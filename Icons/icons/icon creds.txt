@@ -1,0 +1,11 @@
+leaf: Daniel Bruce - https://www.flaticon.com/free-icon/tree-leaf_3923
+temp: https://www.flaticon.com/free-icon/thermometer_808602 - hirshwolf
+power: Smashicons - https://www.flaticon.com/free-icon/flash_252851 
+shield: Dave Gandy - https://www.flaticon.com/free-icon/shield_25229 
+portal: https://www.flaticon.com/free-icon/portal_1374515 - Freepik
+
+ai:
+eye: Gregor Cresnar - https://www.flaticon.com/free-icon/eye_159604
+snake eye: Freepik - https://www.flaticon.com/free-icon/eye-with-reptilian-pupil_64908
+cpu: Icongeek26 - https://www.flaticon.com/free-icon/cpu_1250903
+
